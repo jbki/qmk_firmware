@@ -18,17 +18,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	 * `-----------------------------------------------------------------------------------'
 	 */
 	[0] = LAYOUT_planck_mit(
-		KC_TAB,  KC_QUOT, KC_COMM, KC_DOT,  KC_P,    KC_Y,    KC_F,    KC_G,    KC_C,    KC_R,    KC_L,    KC_BSPC,
+		KC_TAB,   KC_QUOT, KC_COMM, KC_DOT,  KC_P,    KC_Y,    KC_F,    KC_G,    KC_C,    KC_R,    KC_L,    KC_BSPC,
 		KC_LCTL,  KC_A,    KC_O,    KC_E,    KC_U,    KC_I,    KC_D,    KC_H,    KC_T,    KC_N,    KC_S,    KC_ENT,
-		KC_LSFT, KC_SCLN, KC_Q,    KC_J,    KC_K,    KC_X,    KC_B,    KC_M,    KC_W,    KC_V,    KC_Z,     KC_LSFT,
-		KC_ESC, KC_LGUI, KC_CAPS, KC_LALT, MO(1),    KC_SPC,  MO(2),   KC_RALT, _______, KC_Z,   KC_RSFT 
-			),
+		KC_LSFT,  KC_SCLN, KC_Q,    KC_J,    KC_K,    KC_X,    KC_B,    KC_M,    KC_W,    KC_V,    KC_Z,    KC_LSFT,
+		KC_ESC,   KC_LGUI, KC_CAPS, KC_LALT, MO(1),   KC_SPC,  MO(2),   KC_RALT, _______, KC_Z,    KC_RSFT 
+	),
 
-	/* Layer 1
+/* Layer 1
 	 * ,-----------------------------------------------------------------------------------.
-	 * |   `  |  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |  F7  |  F8  |  F9  |  F10 |      |
+	 * |   `  |      |      |      |      |      |      |      |      |      |      |      |
 	 * |------+------+------+------+------+-------------+------+------+------+------+------|
-	 * |      | Vol- | Vol+ | Mute |      |      |      |  F11 |  F12 |      |      |      |
+	 * |      |      |      |      |      |      |      |      |      |      |      |      |
 	 * |------+------+------+------+------+------|------+------+------+------+------+------|
 	 * |      |      |      |      |      |      |      |      |      |      |      |      |
 	 * |------+------+------+------+------+------+------+------+------+------+------+------|
@@ -36,17 +36,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	 * `-----------------------------------------------------------------------------------'
 	 */
 	[1] = LAYOUT_planck_mit(
-		KC_GRV,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  _______,
-		KC_F11,  KC_F12, KC_MUTE, KC_VOLD, KC_VOLU, KC_LEFT_PAREN, KC_RIGHT_PAREN, KC_MINS, KC_EQL, KC_LBRC, KC_RBRC, KC_BSLS,
-		_______, _______, _______, _______, _______, _______, _______, KC_SLASH, _______, _______, _______, _______,
-		RESET,   _______, _______, _______, _______,     _______,      _______, _______, _______, _______, _______
+	
+	KC_0,     KC_1,    KC_2,    KC_3,    KC_4,    KC_GRV,  KC_DLR,  KC_5,    KC_6,   KC_7,    KC_8,    KC_9,    
+	KC_COLON, KC_MINS, KC_LBRC, KC_RBRC, KC_BSLS, _______, _______, KC_BSLS, KC_EQL, KC_UNDS, KC_MINS, _______,
+	_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+	RESET,   _______, _______, _______, _______, _______, _______, KC_LEFT, KC_UP, KC_DOWN, KC_RIGHT
 		),
 
 	/* LAYER 2 (R_ INDICATES RGB CONTROLS)
 	 * ,-----------------------------------------------------------------------------------.
 	 * |      |   1  |   2  |   3  |   4  |   5  |   6  |   7  |   8  |   9  |   0  |      |
 	 * |------+------+------+------+------+-------------+------+------+------+------+------|
-	 * |      |R_TOG |R_MODE|R_HUE+|R_HUE-|      |      |   -  |   =  |   [  |   ]  |  \   |
+	 * |      |   -  |R_MODE|R_HUE+|R_HUE-|      |      |   -  |   =  |   [  |   -  |  \   |
 	 * |------+------+------+------+------+------|------+------+------+------+------+------|
 	 * |      |BL_TOG|BL_STEP|     |      |      |      |      |      |      |      |      |
 	 * |------+------+------+------+------+------+------+------+------+------+------+------|
@@ -54,11 +55,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	 * `-----------------------------------------------------------------------------------'
 	 */
 	[2] = LAYOUT_planck_mit(
-		_______, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    _______,
-		_______, RGB_TOG, RGB_MOD, RGB_HUI, RGB_HUD, _______, _______,  _______,  _______,  _______,  _______,  _______,  
-		_______, BL_TOGG, BL_STEP, _______, _______, _______, _______, _______, _______, _______, KC_UP, _______,
-		_______, _______, _______, _______, _______,     _______,      _______, _______, KC_LEFT, KC_DOWN, KC_RGHT
-			)
+
+	KC_0,     KC_1,    KC_2,    KC_3,    KC_4,    KC_GRV,  KC_DLR,  KC_5,    KC_6,   KC_7,    KC_8,    KC_9,    
+	KC_COLON, KC_MINS, RGB_MOD, RGB_HUI, KC_SLASH, _______, _______,  KC_SLASH,  _______,  _______,  KC_MINS,  _______,  
+	KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12,
+	KC_MY_COMPUTER, KC_WWW_HOME, KC_WWW_SEARCH, KC_WWW_FORWARD, _______,     _______,      _______, _______, KC_LEFT, KC_DOWN, KC_RGHT
+
+	)
 };
 
 
