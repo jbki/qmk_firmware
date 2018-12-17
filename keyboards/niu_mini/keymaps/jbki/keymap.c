@@ -16,17 +16,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	[1] = LAYOUT_planck_mit(
 	
 	KC_0,     KC_1,    KC_2,    KC_3,    KC_4,    KC_GRV,  KC_DLR,  KC_5,    KC_6,   KC_7,    KC_8,    KC_9,    
-	KC_COLON, KC_MINS, KC_LBRC, KC_RBRC, KC_BSLS, _______, _______, KC_BSLS, KC_EQL, KC_UNDS, KC_MINS, _______,
+	_______, KC_MINS, KC_LBRC, KC_RBRC, KC_BSLS, _______, _______, KC_BSLS, KC_EQL, KC_UNDS, KC_MINS, _______,
 	_______, _______, _______, _______, _______, KC_BTN1,  KC_BTN2, KC_MS_LEFT, KC_MS_DOWN, KC_MS_UP, KC_MS_RIGHT, _______,				
-	RESET,   _______, _______, _______, _______, _______, _______, KC_LEFT, KC_UP, KC_DOWN, KC_RIGHT
+	RESET,   _______, _______, _______, _______, _______, KC_LEFT, KC_UP, KC_DOWN, KC_RIGHT, _______
 		),
 
 	[2] = LAYOUT_planck_mit(
 
 	KC_0,     KC_1,    KC_2,    KC_3,    KC_4,    KC_GRV,  KC_DLR,  KC_5,    KC_6,   KC_7,    KC_8,    KC_9,    
-	KC_COLON, KC_MINS, RGB_MOD, RGB_HUI, KC_SLASH, _______, _______,  KC_SLASH,  _______,  _______,  KC_MINS,  _______,  
-	KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12,
-	KC_MY_COMPUTER, KC_WWW_HOME, KC_WWW_SEARCH, KC_WWW_FORWARD, _______,     _______,      _______, _______, KC_LEFT, KC_DOWN, KC_RGHT
+	_______, KC_MINS, KC_UNDS, RGB_HUI, KC_COLON, _______, _______,  KC_SLASH,  _______,  _______,  KC_MINS,  _______,  
+	_______, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, _______,
+	KC_MY_COMPUTER, KC_WWW_HOME, KC_WWW_SEARCH, KC_WWW_FORWARD, _______, _______, _______, _______, _______, _______, _______
 
 	)
 };
