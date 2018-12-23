@@ -9,8 +9,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	[0] = LAYOUT_planck_mit(
 		LALT_T(KC_TAB),   KC_QUOT, KC_COMM, KC_DOT,  KC_P,    KC_Y,    KC_F,    KC_G,    KC_C,    KC_R,    KC_L,    KC_BSPC,
 		LCTL_T(KC_ESC),  KC_A,    KC_O,    KC_E,    KC_U,    KC_I,    KC_D,    KC_H,    KC_T,    KC_N,    KC_S,    KC_ENT,
-		LSFT_T(KC_MINS),  KC_LGUI, KC_Q,    KC_J,    KC_K,    KC_X,    KC_B,    KC_M,    KC_W,    KC_V,    KC_LGUI,    RSFT_T(KC_UNDS),
-		KC_ESC,   KC_LALT, KC_HOME, MO(3), MO(1),   KC_SPC,  MO(2),   MO(4), KC_END, KC_DEL, KC_Z
+		LSFT_T(KC_MINS),  KC_LGUI, KC_Q,    KC_J,    KC_K,    KC_X,    KC_B,    KC_M,    KC_W,    KC_V,    KC_Z,  RSFT_T(KC_UNDS),
+		KC_ESC,   KC_LALT, KC_HOME, MO(3), MO(1),   KC_SPC,  MO(2),   MO(4), KC_RALT, KC_WWW_SEARCH, KC_LGUI
 	),
 
 	[1] = LAYOUT_planck_mit(
@@ -23,21 +23,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	[2] = LAYOUT_planck_mit(
         KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,   KC_8,    KC_9,      KC_0,    _______,
         KC_COLON, KC_CIRC, KC_DLR, KC_HASH, KC_ASTERISK, KC_PERCENT, KC_BSLS, KC_SLASH, KC_EQL, KC_MINS, KC_UNDS, _______,  
-        _______, _______, _______, _______, _______, KC_AMPERSAND,   KC_QUES, KC_PIPE, KC_PLUS, _______, _______, _______,
+        _______, _______, _______, _______, _______, KC_AMPERSAND,   KC_QUES, KC_PIPE, KC_PLUS, KC_PASTE, _______, _______,
         _______, _______, _______,  LALT(KC_TAB), _______,  _______, _______, KC_LALT, _______, _______, _______
 	),
 
 	[3] = LAYOUT_planck_mit (
-        _______, _______, _______, _______, _______, _______, _______, KC_PGUP, KC_UP, KC_PGDOWN, _______, _______,
-        _______, _______, _______, _______, _______, _______, KC_HOME, KC_LEFT, KC_DOWN, KC_RIGHT, KC_END, _______,
-        _______, _______, _______, _______, _______, _______, KC_INSERT, KC_MENU, KC_DELETE, _______, _______, _______,
+        _______, _______, _______, _______, _______, _______, _______, KC_PGUP, KC_UP, KC_PGDOWN, _______, KC_DEL,
+        _______, KC_MYCM, KC_MAIL, _______, _______, _______, KC_HOME, KC_LEFT, KC_DOWN, KC_RIGHT, KC_END, _______,
+        _______, _______, _______, _______, _______, _______, KC_FIND, KC_APP, KC_PAUSE, KC_INSERT, _______, _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
 	),
 
 	[4] = LAYOUT_planck_mit(
         _______,  _______,     KC_BTN1,    KC_MS_UP,   KC_BTN2,     _______,       _______, KC_BSLS, KC_EQL, KC_UNDS, KC_MINS, KC_DEL,
         _______,  KC_MS_WH_UP, KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT, KC_MS_WH_DOWN, _______, KC_LBRC, KC_RBRC, _______, _______, _______,
-        _______, _______,     _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+        _______, KC_WSCH,     KC_WWW_SEARCH, KC_WBAK, KC_WFWD, KC_WSTP, _______, _______, _______, _______, _______, _______,
         _______, _______,     _______, _______, _______, _______, _______, _______, _______, _______, _______
 	)
 };
