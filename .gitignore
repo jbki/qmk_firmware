@@ -71,3 +71,4 @@ id_rsa_*
 
 .gitignore
 /keyboards/**/jbki2
+*swo
